@@ -1,5 +1,7 @@
 package trumplab.teacherapp;
 
+import nav_drawer.commonDrawer;
+import nav_drawer.fragmentDrawer;
 import library.TabsPagerAdapter;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -17,7 +19,7 @@ import android.widget.TextView;
 
 
 
-	public class TimetableSetup  extends ActionBarActivity implements
+	public class TimetableSetup  extends commonDrawer implements
 			ActionBar.TabListener {
 
 		private ViewPager viewPager;
@@ -31,13 +33,13 @@ import android.widget.TextView;
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.timetablesetup);
-			/*
+			//setContentView(R.layout.timetablesetup);
+			
 			LayoutInflater inflater = (LayoutInflater) this
 		            .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		    View contentView = inflater.inflate(R.layout.timetablesetup, null, false);
 		    mDrawerLayout.addView(contentView, 0);
-		*/
+		
 		    
 			//Typeface tf= Typeface.createFromAsset(getAssets(), getString(R.string.fontname));
 

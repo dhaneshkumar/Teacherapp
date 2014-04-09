@@ -11,6 +11,38 @@
     <string name="phoneList">Phone List</string>
     <string name="timeTable">Time Table</string>
     <string name="fontname">Lora-Regular.ttf</string>
+    
+    <string-array name="navigationList">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Messages</item>
+        <item>Attendance</item>
+        <item>Setting</item>
+       
+
+    
+    </string-array>
+    
+    
+    
+     <array name="nav_drawer_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/message</item>
+        <item>@drawable/calender</item>
+        <item>@drawable/setting</item>
+    </array> 
+   
+    
+    <string name="vborder">8dp</string>
+    
+    
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
    
 
 </resources>
