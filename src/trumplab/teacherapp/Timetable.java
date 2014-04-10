@@ -12,13 +12,10 @@ import android.widget.LinearLayout;
 	public class Timetable extends Fragment {
 		
 		int index=0;
-		
-		
 		public Timetable(int i)
 		{
 			index=i;
 		}
-		
 		
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,16 +27,12 @@ import android.widget.LinearLayout;
 		
 		@Override
 		public void onActivityCreated(Bundle savedInstanceState) {
-		    super.onActivityCreated(savedInstanceState);
-		    
+		   super.onActivityCreated(savedInstanceState); 
 		   LinearLayout l1 = (LinearLayout) getView().findViewById(R.id.LinearLayout);
 		   
 		 /*
 		  * Start your code from here............
 		  */
-
-		   
-		   
 		}
 		
 	

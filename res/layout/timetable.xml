@@ -1,18 +1,46 @@
-<ScrollView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="fill_parent"
-  android:background="@color/white"
-  android:id="@+id/s1"
-  android:layout_height="fill_parent">
-
-
 <LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e7e7e7"
+    android:weightSum="2"
+    android:orientation="vertical" >
+<LinearLayout 
+    android:layout_weight="0.999995"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical" >
-   
-
+    android:gravity="center">
+    <TextView 
+    android:id="@+id/presentclick"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:textColor="#b4b4b4"
+    android:text="Present"
+    android:gravity="center"
+    android:background="@drawable/redround"
+    android:textSize="24sp"/>
 </LinearLayout>
-</ScrollView>
+
+<TextView
+    android:id="@+id/linegap"
+    android:layout_width="fill_parent"
+    android:layout_height="3dp"
+    android:background="#878787" />
+
+<LinearLayout 
+    android:layout_weight="0.999995"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+<TextView 
+    android:id="@+id/absentclick"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:textColor="#b4b4b4"
+    android:text="Absent"
+    android:gravity="center"
+    android:textSize="24sp"
+    android:background="@drawable/greenround"/>
+</LinearLayout>
+</LinearLayout>
