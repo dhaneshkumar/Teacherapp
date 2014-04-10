@@ -21,7 +21,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public int getCount() {
 		// get item count - equal to number of tabs
-		return 6;
+		return 20;
 	}
 
 }
