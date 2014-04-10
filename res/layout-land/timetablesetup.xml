@@ -1,0 +1,49 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e7e7e7"
+    android:weightSum="2"
+    android:orientation="horizontal" >
+<LinearLayout 
+    android:id="@+id/presentclick"
+    android:clickable="true"
+    android:layout_weight="0.999995"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:textColor="#b4b4b4"
+    android:text="Present"
+    android:gravity="center"
+    android:background="@drawable/redround"
+    android:textSize="24sp"/>
+</LinearLayout>
+
+<TextView
+    android:id="@+id/linegap"
+    android:layout_width="3dp"
+    android:layout_height="match_parent"
+    android:background="#878787" />
+
+<LinearLayout 
+    android:id="@+id/absentclick"
+    android:clickable="true"
+    android:layout_weight="0.999995"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+<TextView 
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:textColor="#b4b4b4"
+    android:text="Absent"
+    android:gravity="center"
+    android:textSize="24sp"
+    android:background="@drawable/greenround"/>
+</LinearLayout>
+</LinearLayout>
+
