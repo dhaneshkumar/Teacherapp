@@ -2,7 +2,6 @@ package trumplab.teacherapp;
 
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
@@ -17,28 +16,38 @@ import android.widget.TextView;
 		private ActionBar actionBar;
 		private int rollnums=20;
 		private int index=0;
+		private static String SAVED_INDEX;
 		// Tab titles
 		private String[] tabs;
 		private int[] attendance=new int[rollnums];
-		
+		private static String SAVED_ATTEN;
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if (savedInstanceState != null) {
+			  //System.out.println(index);
+		      index=savedInstanceState.getInt(SAVED_INDEX);
+		      for(int i=1; i<=rollnums; i++){
+			  attendance[i-1]=savedInstanceState.getIntArray(SAVED_ATTEN)[i-1];
+			  }
+		      
+		}
 		rollnumstring();
 		setContentView(R.layout.timetablesetup);
 		
 		//Action bar description
 		actionBar = getSupportActionBar();
 		actionBar.setTitle("Attendance");
-		actionBar.setStackedBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.parrotgreen)));		
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		actionBar.setStackedBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.contact_font_color)));		
+		//actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.contact_font_color)));  			
 
 		// Adding Tabs
 		for (String tab_name : tabs) {
 			actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
+			actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		}
-		 LinearLayout l1= (LinearLayout) findViewById(R.id.LinearLayout);
+		actionBar.setSelectedNavigationItem(index);
 		 LinearLayout presentview= (LinearLayout) findViewById(R.id.presentclick);
 		 LinearLayout absentview= (LinearLayout) findViewById(R.id.absentclick);
 		 presentview.setOnClickListener(new View.OnClickListener() {
@@ -111,5 +120,20 @@ import android.widget.TextView;
 			    }
 			
 		}
-
+		
+		@Override
+		protected void onSaveInstanceState (Bundle outState) {
+		    super.onSaveInstanceState(outState);
+		    outState.putInt(SAVED_INDEX,index);
+		    outState.putIntArray(SAVED_ATTEN,attendance);
+		}
+		
+		@Override
+	    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+	        super.onRestoreInstanceState(savedInstanceState);
+	        index=savedInstanceState.getInt(SAVED_INDEX);
+		    for(int i=1; i<=rollnums; i++){
+			attendance[i-1]=savedInstanceState.getIntArray(SAVED_ATTEN)[i-1];
+	    }
+	}
 	}
