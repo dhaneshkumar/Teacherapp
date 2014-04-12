@@ -14,12 +14,13 @@
     android:layout_height="match_parent"
     android:gravity="center">
     <TextView
+    android:id="@+id/presenttxt"
     android:layout_width="150dp"
     android:layout_height="150dp"
     android:textColor="#b4b4b4"
     android:text="Present"
     android:gravity="center"
-    android:background="@drawable/redround"
+    android:background="@drawable/greenround"
     android:textSize="24sp"/>
 </LinearLayout>
 
@@ -37,12 +38,13 @@
     android:layout_height="match_parent"
     android:gravity="center">
 <TextView 
+    android:id="@+id/absenttxt"
     android:layout_width="150dp"
     android:layout_height="150dp"
     android:textColor="#b4b4b4"
     android:text="Absent"
     android:gravity="center"
     android:textSize="24sp"
-    android:background="@drawable/greenround"/>
+    android:background="@drawable/redround"/>
 </LinearLayout>
 </LinearLayout>
